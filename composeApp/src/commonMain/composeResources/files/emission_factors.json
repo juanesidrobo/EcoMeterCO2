@@ -1,0 +1,338 @@
+[
+  {
+    "id": "transport_car_petrol",
+    "category": "TRANSPORT",
+    "name": "Carro (Gasolina)",
+    "unit": "km",
+    "co2ePerUnit": 0.170,
+    "source": "UK Gov GHG 2025"
+  },
+  {
+    "id": "transport_car_diesel",
+    "category": "TRANSPORT",
+    "name": "Carro (Diesel)",
+    "unit": "km",
+    "co2ePerUnit": 0.158,
+    "source": "UK Gov GHG 2025"
+  },
+  {
+    "id": "transport_car_electric",
+    "category": "TRANSPORT",
+    "name": "Carro Eléctrico",
+    "unit": "km",
+    "co2ePerUnit": 0.047,
+    "source": "UK Gov GHG 2025"
+  },
+  {
+    "id": "transport_car_hybrid",
+    "category": "TRANSPORT",
+    "name": "Carro Híbrido",
+    "unit": "km",
+    "co2ePerUnit": 0.108,
+    "source": "UK Gov GHG 2025"
+  },
+  {
+    "id": "transport_motorcycle",
+    "category": "TRANSPORT",
+    "name": "Moto",
+    "unit": "km",
+    "co2ePerUnit": 0.103,
+    "source": "UK Gov GHG 2025"
+  },
+  {
+    "id": "transport_bus",
+    "category": "TRANSPORT",
+    "name": "Bus Público",
+    "unit": "km",
+    "co2ePerUnit": 0.096,
+    "source": "UK Gov GHG 2025"
+  },
+  {
+    "id": "transport_metro",
+    "category": "TRANSPORT",
+    "name": "Metro/Tren Urbano",
+    "unit": "km",
+    "co2ePerUnit": 0.035,
+    "source": "UK Gov GHG 2025"
+  },
+  {
+    "id": "transport_train",
+    "category": "TRANSPORT",
+    "name": "Tren Interurbano",
+    "unit": "km",
+    "co2ePerUnit": 0.041,
+    "source": "UK Gov GHG 2025"
+  },
+  {
+    "id": "transport_flight_short",
+    "category": "TRANSPORT",
+    "name": "Vuelo Corto (<3h)",
+    "unit": "km",
+    "co2ePerUnit": 0.255,
+    "source": "UK Gov GHG 2025"
+  },
+  {
+    "id": "transport_flight_long",
+    "category": "TRANSPORT",
+    "name": "Vuelo Largo (>3h)",
+    "unit": "km",
+    "co2ePerUnit": 0.195,
+    "source": "UK Gov GHG 2025"
+  },
+  {
+    "id": "transport_taxi",
+    "category": "TRANSPORT",
+    "name": "Taxi/Uber",
+    "unit": "km",
+    "co2ePerUnit": 0.203,
+    "source": "UK Gov GHG 2025"
+  },
+  {
+    "id": "transport_bike",
+    "category": "TRANSPORT",
+    "name": "Bicicleta",
+    "unit": "km",
+    "co2ePerUnit": 0.0,
+    "source": "Zero emissions"
+  },
+  {
+    "id": "transport_walk",
+    "category": "TRANSPORT",
+    "name": "Caminar",
+    "unit": "km",
+    "co2ePerUnit": 0.0,
+    "source": "Zero emissions"
+  },
+  {
+    "id": "food_meal_beef",
+    "category": "FOOD",
+    "name": "Comida con Carne de Res",
+    "unit": "porción",
+    "co2ePerUnit": 6.61,
+    "source": "Poore & Nemecek 2018"
+  },
+  {
+    "id": "food_meal_lamb",
+    "category": "FOOD",
+    "name": "Comida con Cordero",
+    "unit": "porción",
+    "co2ePerUnit": 5.84,
+    "source": "Poore & Nemecek 2018"
+  },
+  {
+    "id": "food_meal_pork",
+    "category": "FOOD",
+    "name": "Comida con Cerdo",
+    "unit": "porción",
+    "co2ePerUnit": 2.41,
+    "source": "Poore & Nemecek 2018"
+  },
+  {
+    "id": "food_meal_chicken",
+    "category": "FOOD",
+    "name": "Comida con Pollo",
+    "unit": "porción",
+    "co2ePerUnit": 1.82,
+    "source": "Poore & Nemecek 2018"
+  },
+  {
+    "id": "food_meal_fish",
+    "category": "FOOD",
+    "name": "Comida con Pescado",
+    "unit": "porción",
+    "co2ePerUnit": 1.34,
+    "source": "Poore & Nemecek 2018"
+  },
+  {
+    "id": "food_meal_eggs",
+    "category": "FOOD",
+    "name": "Comida con Huevos",
+    "unit": "porción",
+    "co2ePerUnit": 0.98,
+    "source": "Poore & Nemecek 2018"
+  },
+  {
+    "id": "food_meal_vegetarian",
+    "category": "FOOD",
+    "name": "Comida Vegetariana",
+    "unit": "porción",
+    "co2ePerUnit": 0.51,
+    "source": "Poore & Nemecek 2018"
+  },
+  {
+    "id": "food_meal_vegan",
+    "category": "FOOD",
+    "name": "Comida Vegana",
+    "unit": "porción",
+    "co2ePerUnit": 0.35,
+    "source": "Poore & Nemecek 2018"
+  },
+  {
+    "id": "food_coffee",
+    "category": "FOOD",
+    "name": "Café",
+    "unit": "taza",
+    "co2ePerUnit": 0.21,
+    "source": "Carbon Trust"
+  },
+  {
+    "id": "food_milk_dairy",
+    "category": "FOOD",
+    "name": "Leche de Vaca",
+    "unit": "litro",
+    "co2ePerUnit": 1.39,
+    "source": "Poore & Nemecek 2018"
+  },
+  {
+    "id": "food_milk_oat",
+    "category": "FOOD",
+    "name": "Leche de Avena",
+    "unit": "litro",
+    "co2ePerUnit": 0.29,
+    "source": "Poore & Nemecek 2018"
+  },
+  {
+    "id": "food_cheese",
+    "category": "FOOD",
+    "name": "Queso",
+    "unit": "kg",
+    "co2ePerUnit": 13.5,
+    "source": "Poore & Nemecek 2018"
+  },
+  {
+    "id": "energy_electricity",
+    "category": "ENERGY",
+    "name": "Electricidad (Promedio)",
+    "unit": "kWh",
+    "co2ePerUnit": 0.41,
+    "source": "Global Avg 2024"
+  },
+  {
+    "id": "energy_electricity_renewable",
+    "category": "ENERGY",
+    "name": "Electricidad Renovable",
+    "unit": "kWh",
+    "co2ePerUnit": 0.02,
+    "source": "IPCC"
+  },
+  {
+    "id": "energy_natural_gas",
+    "category": "ENERGY",
+    "name": "Gas Natural (Calefacción)",
+    "unit": "kWh",
+    "co2ePerUnit": 0.18,
+    "source": "UK Gov GHG 2025"
+  },
+  {
+    "id": "energy_lpg",
+    "category": "ENERGY",
+    "name": "Gas LP (Cocina)",
+    "unit": "kg",
+    "co2ePerUnit": 2.98,
+    "source": "UK Gov GHG 2025"
+  },
+  {
+    "id": "energy_heating_oil",
+    "category": "ENERGY",
+    "name": "Combustible para Calefacción",
+    "unit": "litro",
+    "co2ePerUnit": 2.52,
+    "source": "UK Gov GHG 2025"
+  },
+  {
+    "id": "energy_water_hot",
+    "category": "ENERGY",
+    "name": "Agua Caliente",
+    "unit": "litro",
+    "co2ePerUnit": 0.05,
+    "source": "Estimate"
+  },
+  {
+    "id": "energy_ac",
+    "category": "ENERGY",
+    "name": "Aire Acondicionado",
+    "unit": "hora",
+    "co2ePerUnit": 0.9,
+    "source": "EPA Estimate"
+  },
+  {
+    "id": "purchase_clothing_new",
+    "category": "PURCHASES",
+    "name": "Ropa Nueva",
+    "unit": "prenda",
+    "co2ePerUnit": 8.5,
+    "source": "Carbon Trust"
+  },
+  {
+    "id": "purchase_clothing_secondhand",
+    "category": "PURCHASES",
+    "name": "Ropa de Segunda Mano",
+    "unit": "prenda",
+    "co2ePerUnit": 0.5,
+    "source": "Estimate"
+  },
+  {
+    "id": "purchase_smartphone",
+    "category": "PURCHASES",
+    "name": "Smartphone",
+    "unit": "unidad",
+    "co2ePerUnit": 70.0,
+    "source": "Apple Environmental Report"
+  },
+  {
+    "id": "purchase_laptop",
+    "category": "PURCHASES",
+    "name": "Laptop",
+    "unit": "unidad",
+    "co2ePerUnit": 300.0,
+    "source": "Dell Environmental Report"
+  },
+  {
+    "id": "purchase_tv",
+    "category": "PURCHASES",
+    "name": "Televisor",
+    "unit": "unidad",
+    "co2ePerUnit": 200.0,
+    "source": "Industry Estimate"
+  },
+  {
+    "id": "purchase_furniture",
+    "category": "PURCHASES",
+    "name": "Mueble Mediano",
+    "unit": "unidad",
+    "co2ePerUnit": 50.0,
+    "source": "Industry Estimate"
+  },
+  {
+    "id": "purchase_book",
+    "category": "PURCHASES",
+    "name": "Libro Nuevo",
+    "unit": "unidad",
+    "co2ePerUnit": 1.1,
+    "source": "Carbon Trust"
+  },
+  {
+    "id": "purchase_shoes",
+    "category": "PURCHASES",
+    "name": "Zapatos",
+    "unit": "par",
+    "co2ePerUnit": 14.0,
+    "source": "MIT Study"
+  },
+  {
+    "id": "purchase_plastic_bag",
+    "category": "PURCHASES",
+    "name": "Bolsa de Plástico",
+    "unit": "unidad",
+    "co2ePerUnit": 0.033,
+    "source": "UK Environment Agency"
+  },
+  {
+    "id": "purchase_reusable_bag",
+    "category": "PURCHASES",
+    "name": "Bolsa Reutilizable",
+    "unit": "unidad",
+    "co2ePerUnit": 0.005,
+    "source": "UK Environment Agency"
+  }
+]
