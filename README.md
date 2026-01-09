@@ -1,3 +1,17 @@
+<div align="center">
+  <img src="logoAppEcoCO2.png" alt="EcoMeter Logo" width="140px" />
+  <h1>🌱 EcoMeter</h1>
+  <p>
+    <strong>Daily Carbon Footprint Tracker with Kotlin Multiplatform</strong>
+  </p>
+
+  <p>
+    <a href="https://kotlinlang.org"><img src="https://img.shields.io/badge/Kotlin-2.0-purple.svg" alt="Kotlin"></a>
+    <a href="https://www.jetbrains.com/lp/compose-multiplatform/"><img src="https://img.shields.io/badge/Compose-Multiplatform-blue.svg" alt="Compose MP"></a>
+    <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License"></a>
+  </p>
+</div>
+
 # 🌱 EcoMeterco2 - Daily Carbon Footprint Tracker
 
 **EcoMeter turns daily choices into a clear CO₂e estimate and gives you one tiny, personalized action you can actually do today.**
