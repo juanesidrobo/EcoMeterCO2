@@ -1,6 +1,6 @@
 <div align="center">
   <img src="logoAppEcoCO2.png" alt="EcoMeter Logo" width="140px" />
-  <h1>🌱 EcoMeter</h1>
+  <h1>🌱 EcoMeterCO2</h1>
   <p>
     <strong>Daily Carbon Footprint Tracker with Kotlin Multiplatform</strong>
   </p>
@@ -11,14 +11,13 @@
     <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License"></a>
   </p>
 </div>
+---
 
-# 🌱 EcoMeterco2 - Daily Carbon Footprint Tracker
+https://github.com/user-attachments/assets/0cfbbde7-4bef-43be-b880-c4d9d85df2c8
 
-**EcoMeter turns daily choices into a clear CO₂e estimate and gives you one tiny, personalized action you can actually do today.**
+go como: https://github.com/tu-usuario/EcoMeter/assets/xxxx/video.mp4 -->
 
-[![Kotlin](https://img.shields.io/badge/Kotlin-2.0-purple.svg)](https://kotlinlang.org)
-[![Compose Multiplatform](https://img.shields.io/badge/Compose-Multiplatform-blue.svg)](https://www.jetbrains.com/lp/compose-multiplatform/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+---
 
 ## 🎯 What It Does
 
