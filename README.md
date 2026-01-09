@@ -11,11 +11,8 @@
     <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License"></a>
   </p>
 </div>
----
 
 https://github.com/user-attachments/assets/0cfbbde7-4bef-43be-b880-c4d9d85df2c8
-
-go como: https://github.com/tu-usuario/EcoMeter/assets/xxxx/video.mp4 -->
 
 ---
 
