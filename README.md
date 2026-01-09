@@ -1,4 +1,4 @@
-# 🌱 EcoMeter - Daily Carbon Footprint Tracker
+# 🌱 EcoMeterco2 - Daily Carbon Footprint Tracker
 
 **EcoMeter turns daily choices into a clear CO₂e estimate and gives you one tiny, personalized action you can actually do today.**
 

@@ -2,8 +2,8 @@ package com.kotlinconf.ecometer.domain
 
 import com.kotlinconf.ecometer.data.ActivityRepository
 import com.kotlinconf.ecometer.data.LocalStorageProvider
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.DelicateCoroutinesApi
+import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import kotlin.random.Random
 
@@ -17,7 +17,6 @@ class TinyActionEngine(
 ) {
     private val completedActions = mutableListOf<TinyActionRecord>()
     private val epsilon = 0.2 // 20% exploration rate
-    private val scope = CoroutineScope(Dispatchers.Default)
 
     /**
      * Load persisted tiny action history
@@ -27,16 +26,24 @@ class TinyActionEngine(
             val savedRecords = storage.loadTinyActionHistory()
             completedActions.clear()
             completedActions.addAll(savedRecords)
+            println("TinyActionEngine: Loaded ${completedActions.size} action records")
         }
     }
 
     /**
      * Save tiny action history to persistent storage
      */
+    @OptIn(DelicateCoroutinesApi::class)
     private fun saveToStorage() {
         storageProvider?.let { storage ->
-            scope.launch {
-                storage.saveTinyActionHistory(completedActions.toList())
+            val recordsToSave = completedActions.toList()
+            GlobalScope.launch {
+                try {
+                    storage.saveTinyActionHistory(recordsToSave)
+                    println("TinyActionEngine: Saved ${recordsToSave.size} action records")
+                } catch (e: Exception) {
+                    println("TinyActionEngine: Error saving: ${e.message}")
+                }
             }
         }
     }
@@ -120,7 +127,7 @@ class TinyActionEngine(
             TinyActionRecord(
                 actionId = actionId,
                 completed = completed,
-                timestamp = kotlinx.datetime.Clock.System.now().toString()
+                timestamp = com.kotlinconf.ecometer.util.currentTimeIso()
             )
         )
         saveToStorage()

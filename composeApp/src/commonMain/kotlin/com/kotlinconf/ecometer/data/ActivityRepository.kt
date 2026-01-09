@@ -2,13 +2,10 @@ package com.kotlinconf.ecometer.data
 
 import com.kotlinconf.ecometer.domain.ActivityEntry
 import com.kotlinconf.ecometer.domain.Category
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
+import com.kotlinconf.ecometer.util.currentTimeMillis
+import kotlinx.coroutines.DelicateCoroutinesApi
+import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
-import kotlinx.datetime.Clock
-import kotlinx.datetime.DateTimeUnit
-import kotlinx.datetime.TimeZone
-import kotlinx.datetime.minus
 
 /**
  * Repository for managing activity entries with persistence support.
@@ -18,7 +15,6 @@ class ActivityRepository(
 ) {
     // In-memory storage
     private val entries = mutableListOf<ActivityEntry>()
-    private val scope = CoroutineScope(Dispatchers.Default)
 
     /**
      * Load entries from persistent storage
@@ -28,22 +24,33 @@ class ActivityRepository(
             val savedEntries = storage.loadEntries()
             entries.clear()
             entries.addAll(savedEntries)
+            println("Loaded ${entries.size} entries from storage")
         }
     }
 
     /**
      * Save entries to persistent storage
+     * Uses GlobalScope to ensure save completes even if caller scope is cancelled
      */
+    @OptIn(DelicateCoroutinesApi::class)
     private fun saveToStorage() {
         storageProvider?.let { storage ->
-            scope.launch {
-                storage.saveEntries(entries.toList())
+            // Create a copy of entries to avoid concurrency issues
+            val entriesToSave = entries.toList()
+            GlobalScope.launch {
+                try {
+                    storage.saveEntries(entriesToSave)
+                    println("Saved ${entriesToSave.size} entries to storage")
+                } catch (e: Exception) {
+                    println("Error saving entries: ${e.message}")
+                }
             }
         }
     }
 
     fun addEntry(entry: ActivityEntry) {
         entries.add(entry)
+        println("Added entry: ${entry.factorId}, total entries: ${entries.size}")
         saveToStorage()
     }
 
@@ -59,11 +66,12 @@ class ActivityRepository(
      * Get entries from the last N days
      */
     fun getEntriesFromLastDays(days: Int): List<ActivityEntry> {
-        val now = Clock.System.now()
-        val cutoff = now.minus(days, DateTimeUnit.DAY, TimeZone.currentSystemDefault())
+        val nowMillis = currentTimeMillis()
+        val millisPerDay = 24L * 60 * 60 * 1000
+        val cutoffMillis = nowMillis - (days * millisPerDay)
 
         return entries.filter { entry ->
-            entry.timestamp >= cutoff
+            entry.timestampMillis >= cutoffMillis
         }
     }
 

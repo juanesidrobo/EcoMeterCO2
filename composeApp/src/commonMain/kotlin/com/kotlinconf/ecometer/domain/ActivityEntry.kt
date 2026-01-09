@@ -1,13 +1,15 @@
 package com.kotlinconf.ecometer.domain
 
 import kotlinx.serialization.Serializable
-import kotlinx.datetime.Clock
-import kotlinx.datetime.Instant
+import com.kotlinconf.ecometer.util.currentTimeMillis
+import com.kotlinconf.ecometer.util.currentTimeIso
+import com.kotlinconf.ecometer.util.parseIsoToMillis
+
 @Serializable
 data class ActivityEntry(
     val id: String,
 
-    // Save as String to serialization
+    // Save as String for serialization
     val timestampIso: String,
 
     val category: Category,
@@ -17,9 +19,9 @@ data class ActivityEntry(
     val co2eTotal: Double,
     val explanation: String
 ) {
-    // Convert the String to Instant real
-    val timestamp: Instant
-        get() = Instant.parse(timestampIso)
+    // Get timestamp as epoch millis
+    val timestampMillis: Long
+        get() = parseIsoToMillis(timestampIso)
 
     companion object {
         fun create(
@@ -27,16 +29,17 @@ data class ActivityEntry(
             amount: Double,
             factor: EmissionFactor
         ): ActivityEntry {
-            val now = Clock.System.now()
+            val nowMillis = currentTimeMillis()
+            val nowIso = currentTimeIso()
 
             return ActivityEntry(
-                id = "${now.toEpochMilliseconds()}-${category.name}",
-                timestampIso = now.toString(),
+                id = "$nowMillis-${category.name}",
+                timestampIso = nowIso,
                 category = category,
                 amount = amount,
                 factorId = factor.id,
                 co2eTotal = amount * factor.co2ePerUnit,
-                explanation = "$amount ${factor.unit} × ${factor.co2ePerUnit} kgCO2e"
+                explanation = "$amount ${factor.unit} x ${factor.co2ePerUnit} kgCO2e"
             )
         }
     }

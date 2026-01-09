@@ -51,7 +51,7 @@ abstract class BaseLocalStorageProvider : LocalStorageProvider {
             schemaVersion = 1,
             entries = entries,
             tinyActionHistory = tinyActionHistory,
-            exportedAt = kotlinx.datetime.Clock.System.now().toString()
+            exportedAt = com.kotlinconf.ecometer.util.currentTimeIso()
         )
         return AppJson.encodeToString(payload)
     }
